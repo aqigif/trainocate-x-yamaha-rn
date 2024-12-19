@@ -1,4 +1,4 @@
-import { StaticScreenProps, useNavigation } from '@react-navigation/native';
+import { StaticScreenProps } from '@react-navigation/native';
 import {
   Image,
   SafeAreaView,
@@ -44,6 +44,7 @@ const Pokedex = ({}: Props) => {
           ) : (
             pokemons.map((pokemon, index) => (
               <PokeCard
+                key={index}
                 title={pokemon.name}
                 num={pokemon.id}
                 image={pokemon.image}
@@ -68,6 +69,7 @@ const Pokedex = ({}: Props) => {
           ) : (
             myPokemons.map((pokemon, index) => (
               <PokeCard
+                key={index}
                 title={pokemon.name}
                 num={pokemon.id}
                 image={pokemon.image}
