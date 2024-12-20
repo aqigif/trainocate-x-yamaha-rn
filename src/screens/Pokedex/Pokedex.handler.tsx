@@ -3,6 +3,7 @@ import {useAppDispatch, useAppSelector} from '../../hooks/useReduxType';
 import {
   addToMyPokemonAction,
   deleteFromMyPokemonAction,
+  getMyPokemons,
 } from '../../redux/actions/myPokeAction';
 import {IPokemon} from '../../types/pokemon';
 import { getPokemonsAction } from '../../redux/actions/pokeAction';
@@ -15,6 +16,7 @@ const usePokedex = () => {
 
   useEffect(() => {
     dispatch(getPokemonsAction());
+    dispatch(getMyPokemons());
   }, [dispatch]);
 
   const addToMyPokemon = (pokemon: IPokemon) => {
