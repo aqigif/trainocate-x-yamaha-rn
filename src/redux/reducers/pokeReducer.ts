@@ -1,6 +1,7 @@
 import {AnyAction} from '@reduxjs/toolkit';
 import {IPokemon} from '../../types/pokemon';
-import POKEMONS, {
+import {
+  POKEMONS,
   ADD_TO_MY_POKEMON,
   DELETE_FROM_MY_POKEMON,
 } from '../actionTypes';

@@ -1,5 +1,5 @@
 import {getPokemonByNameService, getPokemonsService} from '../../services';
-import POKEMONS from '../actionTypes';
+import {POKEMONS} from '../actionTypes';
 
 export const getPokemonsAction = () => async (dispatch: any) => {
   dispatch({type: POKEMONS.GET_POKEMONS_REQUEST});
