@@ -154,6 +154,9 @@ To learn more about React Native, take a look at the following resources:
 - Permission Handler
 - API
   - Fetch
+- Storage
+- Obfuscate native android : https://developer.android.com/build/shrink-code
+- Obfuscate RN Js : https://github.com/AustinZuniga/react-native-obfuscator
 ```
 
 
