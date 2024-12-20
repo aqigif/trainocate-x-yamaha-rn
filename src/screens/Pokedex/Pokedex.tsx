@@ -13,6 +13,7 @@ import React from 'react';
 import {PokeCard} from './components/PokeCard';
 import useNavigationType from '../../hooks/useNavigationType';
 import IconButton from '../../components/IconButton';
+import Icon from '@react-native-vector-icons/fontawesome6';
 
 type Props = StaticScreenProps<{}>;
 
@@ -56,7 +57,12 @@ const Pokedex = ({}: Props) => {
                   <IconButton
                     onPress={() => addToMyPokemon(pokemon)}
                     backgroundColor={'blue'}>
-                    <Text style={{color: 'white'}}>+</Text>
+                    <Icon
+                      iconStyle="solid"
+                      name="plus"
+                      size={20}
+                      color={'white'}
+                    />
                   </IconButton>
                 }
               />
@@ -82,7 +88,12 @@ const Pokedex = ({}: Props) => {
                   <IconButton
                     onPress={() => deleteFromMyPokemon(pokemon.id)}
                     backgroundColor={'red'}>
-                    <Text style={{color: 'white'}}>-</Text>
+                    <Icon
+                      iconStyle="solid"
+                      name="minus"
+                      size={20}
+                      color={'white'}
+                    />
                   </IconButton>
                 }
               />
@@ -95,7 +106,7 @@ const Pokedex = ({}: Props) => {
           size={60}
           backgroundColor={'blue'}
           onPress={() => navigation.navigate('Camera')}>
-          <Text style={{color: 'white'}}>Camera</Text>
+          <Icon iconStyle="solid" name="camera" size={20} color={'white'} />
         </IconButton>
       </View>
     </SafeAreaView>
