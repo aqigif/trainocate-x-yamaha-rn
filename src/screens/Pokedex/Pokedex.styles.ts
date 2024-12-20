@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { Colors } from '../../utils/colors';
 
 const styles = StyleSheet.create({
   body: {
-    backgroundColor: 'red',
+    backgroundColor: Colors.red,
     flex: 1,
   },
   container: {

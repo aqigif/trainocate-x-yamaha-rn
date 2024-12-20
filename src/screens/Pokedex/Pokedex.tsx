@@ -1,4 +1,4 @@
-import { StaticScreenProps } from '@react-navigation/native';
+import {StaticScreenProps} from '@react-navigation/native';
 import {
   Image,
   SafeAreaView,
@@ -10,14 +10,15 @@ import {
 import styles from './Pokedex.styles';
 import usePokedex from './Pokedex.handler';
 import React from 'react';
-import { PokeCard } from './components/PokeCard';
+import {PokeCard} from './components/PokeCard';
 import useNavigationType from '../../hooks/useNavigationType';
 import IconButton from '../../components/IconButton';
 
 type Props = StaticScreenProps<{}>;
 
 const Pokedex = ({}: Props) => {
-  const { pokemons, myPokemons, addToMyPokemon, deleteFromMyPokemon } = usePokedex();
+  const {pokemons, myPokemons, addToMyPokemon, deleteFromMyPokemon} =
+    usePokedex();
   const navigation = useNavigationType();
 
   return (
@@ -26,7 +27,7 @@ const Pokedex = ({}: Props) => {
       <View style={[styles.container]}>
         <Image
           style={styles.image}
-          source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
+          source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}
         />
         <Text style={styles.headerTitle}>Pokedex</Text>
       </View>
@@ -49,12 +50,13 @@ const Pokedex = ({}: Props) => {
                 num={pokemon.id}
                 image={pokemon.image}
                 onPress={() =>
-                  navigation.navigate('PokemonDetail', { id: pokemon.id })
+                  navigation.navigate('PokemonDetail', {id: pokemon.id})
                 }
                 ActionComponent={
-                  <IconButton onPress={() =>
-                    addToMyPokemon(pokemon)} backgroundColor={'blue'}>
-                    <Text style={{ color: 'white' }}>+</Text>
+                  <IconButton
+                    onPress={() => addToMyPokemon(pokemon)}
+                    backgroundColor={'blue'}>
+                    <Text style={{color: 'white'}}>+</Text>
                   </IconButton>
                 }
               />
@@ -74,11 +76,13 @@ const Pokedex = ({}: Props) => {
                 num={pokemon.id}
                 image={pokemon.image}
                 onPress={() =>
-                  navigation.navigate('PokemonDetail', { id: pokemon.id })
+                  navigation.navigate('PokemonDetail', {id: pokemon.id})
                 }
                 ActionComponent={
-                  <IconButton onPress={() => deleteFromMyPokemon(pokemon.id)} backgroundColor={'red'}>
-                    <Text style={{ color: 'white' }}>-</Text>
+                  <IconButton
+                    onPress={() => deleteFromMyPokemon(pokemon.id)}
+                    backgroundColor={'red'}>
+                    <Text style={{color: 'white'}}>-</Text>
                   </IconButton>
                 }
               />
@@ -86,6 +90,14 @@ const Pokedex = ({}: Props) => {
           )}
         </View>
       </ScrollView>
+      <View style={{position: 'absolute', bottom: 50, right: 20}}>
+        <IconButton
+          size={60}
+          backgroundColor={'blue'}
+          onPress={() => navigation.navigate('Camera')}>
+          <Text style={{color: 'white'}}>Camera</Text>
+        </IconButton>
+      </View>
     </SafeAreaView>
   );
 };

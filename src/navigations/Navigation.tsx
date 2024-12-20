@@ -5,6 +5,7 @@ import Home from '../screens/Home';
 import Login from '../screens/Login';
 import Pokedex from '../screens/Pokedex';
 import PokedexDetail from '../screens/PokedexDetail';
+import CameraScreen from '../screens/CameraScreen';
 
 export const RootStack = createNativeStackNavigator({
   screens: {
@@ -31,6 +32,9 @@ export const RootStack = createNativeStackNavigator({
       options: {
         title: 'Trainocate Home',
       },
+    },
+    Camera: {
+      screen: CameraScreen,
     },
   },
 });
