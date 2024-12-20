@@ -134,5 +134,14 @@ To learn more about React Native, take a look at the following resources:
 ```
 - Redux Thunk
 - React Native Installation
+  - Gradlew version
+  - newArchEnabled false
+  - gradlew clean
+  ```
+  cd android
+  ./gradlew clean or .\gradlew clean
+  ```
+  - android studio
+  - choco (sometimes work either only powershell or cmd)
 - Build APK
 ```
