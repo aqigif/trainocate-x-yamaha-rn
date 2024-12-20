@@ -1,8 +1,10 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {myPokeReducer} from './reducers/myPokeReducer';
+import {logger} from 'redux-logger';
 import {pokeReducer} from './reducers/pokeReducer';
 
 const store = configureStore({
+  middleware: getDefaultMiddleware => getDefaultMiddleware().concat([logger]),
   reducer: {
     myPoke: myPokeReducer,
     poke: pokeReducer,

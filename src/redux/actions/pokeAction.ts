@@ -25,7 +25,7 @@ export const getPokemonsAction = () => async (dispatch: any) => {
       },
     });
   } catch (error) {
-    dispatch({type: POKEMONS.GET_POKEMONS_FAILED});
+    dispatch({type: POKEMONS.GET_POKEMONS_FAILED, payload: error});
   }
 };
 
@@ -46,6 +46,6 @@ export const getPokemonDetailAction =
         },
       });
     } catch (error) {
-      dispatch({type: POKEMONS.GET_POKEMONS_DETAIL_FAILED});
+      dispatch({type: POKEMONS.GET_POKEMONS_DETAIL_FAILED, payload: error });
     }
   };
