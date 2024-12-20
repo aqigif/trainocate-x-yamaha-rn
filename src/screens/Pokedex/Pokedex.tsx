@@ -51,7 +51,7 @@ const Pokedex = ({}: Props) => {
                 num={pokemon.id}
                 image={pokemon.image}
                 onPress={() =>
-                  navigation.navigate('PokemonDetail', {id: pokemon.id})
+                  navigation.navigate('PokemonDetail', {name: pokemon.name})
                 }
                 ActionComponent={
                   <IconButton
@@ -82,7 +82,7 @@ const Pokedex = ({}: Props) => {
                 num={pokemon.id}
                 image={pokemon.image}
                 onPress={() =>
-                  navigation.navigate('PokemonDetail', {id: pokemon.id})
+                  navigation.navigate('PokemonDetail', {name: pokemon.name})
                 }
                 ActionComponent={
                   <IconButton

@@ -134,8 +134,8 @@ To learn more about React Native, take a look at the following resources:
 ```
 - Redux Thunk
 - React Native Installation
-  - Gradlew version from 8.10.2 to 8.11.1
-  - newArchEnabled false
+  - change Gradlew version from 8.10.2 to 8.11.1 android/gradle/wrapper/gradle-wrapper.properties
+  - set newArchEnabled false in android/gradle.properties
   - gradlew clean
   ```
   cd android
@@ -144,4 +144,26 @@ To learn more about React Native, take a look at the following resources:
   - android studio
   - choco (sometimes work either only powershell or cmd)
 - Build APK
+```
+
+
+# Day 4
+```
+- Interaction with hardware
+  - Camera
+- Permission Handler
+- API
+  - Fetch
+```
+
+
+```
+step Integration API with redux
+  1. action types
+  2. add/update services
+  3. add actions by using action types and services
+  4. update reducer to handle new action types
+  5. implement in View
+     - dispatch => for actions
+     - selector => for get reducer
 ```

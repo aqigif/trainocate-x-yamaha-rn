@@ -1,8 +1,18 @@
-import { pokemons } from '../../data/pokemons';
+import { useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from '../../hooks/useReduxType';
+import { getPokemonDetailAction } from '../../redux/actions/pokeAction';
 
-const usePokedexDetail = ({ num }: { num: number }) => {
-  const pokemon = pokemons.find((p) => p.id === num);
-  return { pokemon };
+const usePokedexDetail = ({ name }: { name: string }) => {
+  const dispatch = useAppDispatch();
+  const {pokemonDetail, loadingDetail} = useAppSelector(state => state.poke);
+
+  useEffect(() => {
+    if (name) {
+      dispatch(getPokemonDetailAction(name));
+    }
+  }, [dispatch, name]);
+
+  return { pokemonDetail, loadingDetail };
 };
 
 export default usePokedexDetail;
