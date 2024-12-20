@@ -157,13 +157,12 @@ To learn more about React Native, take a look at the following resources:
   - Axios
 - Storage
   - AsyncStorage
-- Obfuscate native android : https://developer.android.com/build/shrink-code
-- Obfuscate RN Js : https://github.com/AustinZuniga/react-native-obfuscator
 ```
 
 
+step Integration API with redux https://github.com/aqigif/trainocate-x-yamaha-rn/commit/a2ec1d33ca0ab107ff14da5fea41735c89201031
 ```
-step Integration API with redux - https://github.com/aqigif/trainocate-x-yamaha-rn/commit/a2ec1d33ca0ab107ff14da5fea41735c89201031
+
   1. action types
   2. add/update services
   3. add actions by using action types and services
@@ -172,3 +171,8 @@ step Integration API with redux - https://github.com/aqigif/trainocate-x-yamaha-
      - dispatch => for actions
      - selector => for get reducer
 ```
+
+
+
+- Obfuscate native android : https://developer.android.com/build/shrink-code
+- Obfuscate RN Js : https://github.com/AustinZuniga/react-native-obfuscator
