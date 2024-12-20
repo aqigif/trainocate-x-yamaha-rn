@@ -134,7 +134,7 @@ To learn more about React Native, take a look at the following resources:
 ```
 - Redux Thunk
 - React Native Installation
-  - Gradlew version
+  - Gradlew version from 8.10.2 to 8.11.1
   - newArchEnabled false
   - gradlew clean
   ```
