@@ -7,11 +7,8 @@ export const getPokemonsAction = () => async (dispatch: any) => {
     const response = await getPokemonsService();
     const newPokemons = response.results;
     const promises = Array.from(newPokemons || []).map(
-      async (item: any, index) => {
+      async (item: any) => {
         const payloadDetail = await getPokemonByNameService(item?.name || '');
-        if (index === 0) {
-          console.log(payloadDetail);
-        }
         return {
           ...payloadDetail.data,
           id: payloadDetail?.id,
