@@ -163,7 +163,7 @@ To learn more about React Native, take a look at the following resources:
 
 
 ```
-step Integration API with redux
+step Integration API with redux - https://github.com/aqigif/trainocate-x-yamaha-rn/commit/a2ec1d33ca0ab107ff14da5fea41735c89201031
   1. action types
   2. add/update services
   3. add actions by using action types and services
