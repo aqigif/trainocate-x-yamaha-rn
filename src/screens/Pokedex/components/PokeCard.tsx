@@ -1,6 +1,6 @@
+import React from 'react';
 import {
   Image,
-  ImageSourcePropType,
   Pressable,
   Text,
   View,
@@ -8,7 +8,7 @@ import {
 
 interface PokeCardProps {
   title: string;
-  image: ImageSourcePropType;
+  image: string;
   num: number;
   onPress: () => void;
   ActionComponent: React.ReactNode;
@@ -25,7 +25,7 @@ export const PokeCard = ({
     <View style={styles.gridItem}>
       <Text style={{ textAlign: 'right' }}>{num}</Text>
       <Pressable onPress={onPress}>
-        <Image source={image} style={styles.imageList} />
+        <Image source={{uri: image}} style={styles.imageList} />
       </Pressable>
 
       <Text numberOfLines={1} style={{ fontWeight: 500, textAlign: 'center' }}>{title}</Text>

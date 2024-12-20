@@ -1,6 +1,9 @@
 import {AnyAction} from '@reduxjs/toolkit';
 import {IPokemon} from '../../types/pokemon';
-import {ADD_TO_MY_POKEMON, DELETE_FROM_MY_POKEMON} from '../actionTypes';
+import POKEMONS, {
+  ADD_TO_MY_POKEMON,
+  DELETE_FROM_MY_POKEMON,
+} from '../actionTypes';
 
 interface IStore {
   pokemons: IPokemon[];
@@ -14,7 +17,7 @@ const initialState: IStore = {
   pokemons: [],
 };
 
-export const myPokeReducer = (state = initialState, action: AnyAction) => {
+export const pokeReducer = (state = initialState, action: AnyAction) => {
   const payload = action?.payload as unknown as IStore;
 
   switch (action.type) {
@@ -28,6 +31,22 @@ export const myPokeReducer = (state = initialState, action: AnyAction) => {
       return {
         ...state,
         pokemons: payload.pokemons,
+      };
+    case POKEMONS.GET_POKEMONS_REQUEST:
+      return {
+        ...state,
+        loading: true,
+      };
+    case POKEMONS.GET_POKEMONS_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        pokemons: payload.pokemons,
+      };
+    case POKEMONS.GET_POKEMONS_FAILED:
+      return {
+        ...state,
+        loading: false,
       };
     default:
       return {

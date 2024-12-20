@@ -4,7 +4,7 @@ import { ADD_TO_MY_POKEMON, DELETE_FROM_MY_POKEMON } from '../actionTypes';
 
 export const addToMyPokemonAction =
   (pokemon: IPokemon) => (dispatch: any, getState: GetState) => {
-    const { pokemons } = getState().myPoke;
+    const {pokemons} = getState().myPoke;
 
     const newPokemons = [...pokemons, pokemon];
     dispatch({
@@ -17,9 +17,9 @@ export const addToMyPokemonAction =
 
 export const deleteFromMyPokemonAction =
   (id: number) => (dispatch: any, getState: GetState) => {
-    const { pokemons } = getState().myPoke;
+    const {pokemons} = getState().myPoke;
 
-    const newPokemons = pokemons.filter((item) => item.id !== id);
+    const newPokemons = pokemons.filter(item => item.id !== id);
     dispatch({
       type: DELETE_FROM_MY_POKEMON,
       payload: {
